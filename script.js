@@ -116,3 +116,4 @@ function typeEffect() {
 
 typeEffect();
 revealElements.forEach((el) => observer.observe(el));
+  
