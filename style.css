@@ -293,3 +293,11 @@ textarea:focus {
 .send-btn:hover {
   background: #4f46e5;
 }
+.hollow-text {
+  font-size: 120px;
+  font-weight: bold;
+  color: transparent; /* Make fill transparent */
+  -webkit-text-stroke: 1px #999; /* Outline color and thickness */
+  text-align: center;
+  font-family: "Arial", sans-serif; /* Or your desired font */
+}
