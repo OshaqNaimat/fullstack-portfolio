@@ -316,13 +316,14 @@ textarea:focus {
   width: 100%;
   padding: 20px 0;
 }
+.card-hover {
+  transition: 0.5s ease;
+  cursor: pointer;
+}
 
-.card {
-  transition: 1s ease;
-}
 .hover-effect:hover > :not(:hover) {
-  opacity: 0.3;
+  opacity: 0.5;
 }
-card:hover {
+.card-hover:hover {
   transform: scale(1.1);
 }
