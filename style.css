@@ -327,3 +327,50 @@ textarea:focus {
 .card-hover:hover {
   transform: scale(1.1);
 }
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 16px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #2a2a2a;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+.form-textarea {
+  resize: none;
+}
+
+.form-button {
+  width: 100%;
+  padding: 14px;
+  background: #6366f1;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form-button:hover {
+  background: #4f46e5;
+}
