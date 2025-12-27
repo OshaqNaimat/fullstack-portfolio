@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oshaq Naimat</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="./style.css" />
 
     <link
@@ -473,9 +474,8 @@
           </div>
 
           <!-- FIXED SECTION BELOW -->
-          <section id="contact-form" style="padding: 40px 0">
-            <form
-              action="https://formspree.io/f/xwpdveyj"
+          <section id="contact-form-section" style="padding: 40px 0">
+            <form id="contact-form"
               method="POST"
               class="contact-form"
             >
@@ -608,6 +608,32 @@
 
         setTimeout(typeEffect, isDeleting ? 50 : 100);
       }
+       emailjs.init("JdRN_OOCcXyJdNtFo"); // 🔹 Public Key
+
+  const form = document.getElementById("contact-form"); // Must select the <form>!
+const formMessage = document.getElementById("form-message");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_3rfqwxo", // Service ID
+    "jpmlm3f",         // Template ID
+    form                // Pass the actual form element
+  )
+  .then(() => {
+    formMessage.style.display = "block";
+    formMessage.textContent = "✅ Message sent successfully!";
+    formMessage.style.color = "limegreen";
+    form.reset();
+  })
+  .catch((err) => {
+    formMessage.style.display = "block";
+    formMessage.textContent = "❌ Failed to send message. Please try again.";
+    formMessage.style.color = "red";
+    console.error("EmailJS error:", err);
+  });
+});
 
       typeEffect();
       revealElements.forEach((el) => observer.observe(el));
